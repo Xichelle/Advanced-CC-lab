@@ -1,0 +1,19 @@
+
+body{
+    background-color:ghostwhite;
+ }
+ #Id1{
+    background-color:rgb(204, 228, 251);
+    width:fit-content
+ }
+ a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12pt;
+ }
+ .heading{
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+ }
+ p{
+    font-family: 'Courier New', Courier, monospace;
+ }
