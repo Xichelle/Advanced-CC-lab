@@ -1,11 +1,51 @@
 body{
+    margin-top: 80px;
     background-color:black;
-    color:ghostwhite
+    color:ghostwhite;
+    font-size: 15pt;
+    
  }
 a {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 12pt;
+    font-size: 15pt;
+    color:ghostwhite
+ }
+ a:visited{
+    color:lightgray;
+    text-decoration: none;
  }
 p{
     font-family: 'Courier New', Courier, monospace;
+ }
+#finalid{
+    font-size: 20pt;
+}
+.navbar {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+.closedeye{
+    position:fixed;
+    margin-left: 200px;
+    top: 0;
+}
+.closedeye:hover{
+    background-color:darkgrey;
+  }
+h6{
+    font-family: 'Courier New', Courier, monospace;
+}
+h4{
+    font-family: 'Courier New', Courier, monospace;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+#oldman{
+    margin-left: 50%;
+}
+#start{
+    margin-top: 0%;
  }
