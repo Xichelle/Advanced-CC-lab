@@ -1,0 +1,39 @@
+.outer-container {
+    display: flex;
+    height: 100vh;
+    flex-flow:column;
+}
+
+.inner-container{
+    display: flex;
+    flex-grow: 1;
+}
+
+.header {
+    height:5vh;
+    font-size: 2em;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    background-color: brown;
+}
+
+.footer {
+    height:5vh;
+    border:1px solid red;
+    font-size: 2em;
+    display:flex;
+    justify-content:end;
+    align-items: center;
+    background-color: firebrick;
+}
+
+.image-1 {
+    background-color: darkred;
+    width:80%;
+}
+
+.image-2 {
+    background-color:crimson;
+    width:20%
+}

@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(0, 20, 101);
+    font-family: "Workbench", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+.element{
+    text-align: center;
+    padding-top: 30px
+}
+.header{
+    background-color:rgb(0, 78, 106);
+}
+
+.content-1{
+    background-color: rgb(125, 36, 36);
+}
+
+.content-2{
+    background-color:rgb(247, 242, 238);
+}
+
+.content-3{
+    background-color:rgb(84, 95, 51)
+}
+
+.footer{
+    background-color:rgb(0, 78, 106)
+}
+
+.content{
+    width: 33.3vw;
+}
+
+.outer-container{
+    height: 100vh;
+    display:flex;
+    flex-flow: column;
+}
+
+.inner-container{
+    display:flex;
+    flex-grow: 1;
+}
+
+/* .container{
+    display: flex;
+    height: 100vh;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+    /* flex-flow: row wrap; */
+    /* justify-content:space-around; */
+    /* main axis */
+    /* align-items: center; */
+    /* cross axis */
+    /* align-content: space-around; */
+/*  */
+
+/* .row-container{
+    height:100vh ;
+    display:flex ;
+    flex-flow: row;
+}
+
+.column-container{
+    display:flex ;
+    flex-flow: column;
+} */
