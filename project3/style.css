@@ -1,0 +1,82 @@
+body { 
+    font-family: "Pixelify Sans", sans-serif; 
+    font-size: 15pt;
+    background-image:url(bg.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700 */
+
+
+
+
+/* ------ Layout ------ */ 
+.container { 
+    display: flex; 
+    justify-content: center; 
+    height: 100vh; 
+    flex-direction: column;
+}
+
+.header {
+    height: 20vh; 
+    display: flex; 
+    justify-content: center;
+    align-items:center;
+}
+/* 
+.footer { 
+    height: 20vh;
+}
+
+.middle{ 
+    width: 100vw; 
+    height: 80vh; 
+    display: flex; 
+    justify-content: center;
+}
+
+.left {
+    width: 25vw; 
+}
+
+.right {
+    width: 25vw;
+} */
+
+/* ------ Form ------ */
+.form {
+    display:contents; 
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    flex-flow: column;
+}
+
+.list {
+    display: flex; 
+    justify-content: start;
+    align-items:center;
+    width: 25vw;
+    flex-flow: column;
+    line-height: 2em;
+}
+
+input[type=text] {
+    font-family:"Pixelify Sans", sans-serif ;
+    padding: 12px 20px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    font-family:"Pixelify Sans", sans-serif ;
+    padding: 30px 30px;
+    margin: 0px 0px;
+    font-size: 20pt;
+    width: 200px; 
+    height: 30px;
+}

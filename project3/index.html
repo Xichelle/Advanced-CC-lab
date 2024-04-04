@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commission Checklist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Commission Checklist</h1>
+        </div>
+        <div class="form">
+            <!-- uploading images -->
+            <form id="questionnaireForm">
+                <p>Do you have a reference of the character for commission?</p>
+                <p>If so, please upload the file below.</p><br>
+                <label for="image1">Upload Image 1:</label>
+                <input type="file" id="image1" name="image1" accept="image/*">
+                <br>
+                <label for="image2">Upload Image 2:</label>
+                <input type="file" id="image2" name="image2" accept="image/*">
+                <br><br>
+
+                <!-- choosing question 1 -->
+                <label for="question1">What kind of drawings are you looking for?</label>
+                <select id="question1" name="question1">
+                    <option value="option1">-- Please choose an option --</option>
+                    <option value="Avatar">Avatar</option>
+                    <option value="Illustration">Illustration</option>
+                    <option value="Black & White Painting">Black & White Painting</option>
+                    <option value="Cartoon Figure">Cartoon Figure</option>
+                </select><br>
+                <img src="type.jpg" width="700px" height="300px">
+                <br><br>
+
+                <!-- choosing question2 -->
+                <label for="question2">Do you have any style preferences?</label>
+                <select id="question2" name="question2">
+                    <option value="option1">-- Please choose an option --</option>
+                    <option value="Cute">Cute</option>
+                    <option value="Bright tone">Bright tone</option>
+                    <option value="Dark tone">Dark tone</option>
+                    <option value="Warm tone">Warm tone</option>
+                    <option value="Cold tone">Cold tone</option>
+                    <option value="Weird">Weird/Gothic</option>
+                </select>
+                <br><br>
+
+                <!-- text question -->
+                <label for="additionalInfo">Additional Information:</label><br>
+                <input id="additionalInfo" type = "text"  name="additionalInfo" value = ""><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- <script src="script.js"></script> -->
+    <script>
+        document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get uploaded images
+            var image1 = document.getElementById('image1').files[0];
+            var image2 = document.getElementById('image2').files[0];
+
+            // Get selected options
+            var question1 = document.getElementById('question1').value;
+            var question2 = document.getElementById('question2').value;
+
+            var additionalInfo=document.getElementById('addiontionalInfo')
+
+            // Display uploaded images and selected options on a new page
+            var newPageContent = "<h1>Now,you can take a screenshot of this page and share it with the artist!</h1>";
+            newPageContent += "<h2>Reference Images:</h2>";
+            if (image1) {
+                newPageContent += "<img src='" + URL.createObjectURL(image1) + "' alt='Image 1' scale=50%><br>";
+            }
+            if (image2) {
+                newPageContent += "<img src='" + URL.createObjectURL(image2) + "' alt='Image 2'width=50% height=50%><br>";
+            }
+            newPageContent += "<h2>Ideas and elements:</h2>";
+            newPageContent += "<p>Commmission Type: " + question1 + "</p>";
+            newPageContent += "<p>Style preference: " + question2 + "</p>";
+            newPageContent += "<p>Additional information:" + additionalInfo +"</p>"
+            
+
+            // Open a new page and display the content
+            var newWindow = window.open();
+            newWindow.document.write(newPageContent);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz</h1>
+
+        <h3>Option A or B?</h3>
+        <form id="q1">
+            <input id="q1_answer" type = "text" name = "q1_answer" value = "">
+        </form>
+
+        <h3>Option C or D?</h3>
+        <p id = "q2">
+            <input type="radio"  name="q2" value="C">
+                <label>C</label>
+            <input type="radio"  name="q2" value="D">
+                <label>D</label>
+        </p>
+
+        <h3>Option E or F?</h3>
+        <select name="q3" id="q3">
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+
+        <h3>G or H?</h3>
+        <p> 0 <input id="q4" type="range" min="0" max="255" value="100"> 255</p>
+        
+
+        <button id ="submit">Done</button>
+        <h1><div id ="results"></div></h1>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

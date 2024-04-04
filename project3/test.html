@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Questionnaire</title>
+</head>
+<body>
+    <h1>Image Questionnaire</h1>
+    <form id="questionnaireForm">
+        <label for="image1">Upload Image 1:</label>
+        <input type="file" id="image1" name="image1" accept="image/*">
+        <br>
+        <label for="image2">Upload Image 2:</label>
+        <input type="file" id="image2" name="image2" accept="image/*">
+        <br>
+        <label for="question1">Question 1:</label>
+        <select id="question1" name="question1">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <br>
+        <label for="question2">Question 2:</label>
+        <select id="question2" name="question2">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <br>
+        <!-- Add more questions here if needed -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get uploaded images
+            var image1 = document.getElementById('image1').files[0];
+            var image2 = document.getElementById('image2').files[0];
+
+            // Get selected options
+            var question1 = document.getElementById('question1').value;
+            var question2 = document.getElementById('question2').value;
+
+            // Display uploaded images and selected options on a new page
+            var newPageContent = "<h1>Submission Results</h1>";
+            newPageContent += "<h2>Uploaded Images:</h2>";
+            if (image1) {
+                newPageContent += "<img src='" + URL.createObjectURL(image1) + "' alt='Image 1'><br>";
+            }
+            if (image2) {
+                newPageContent += "<img src='" + URL.createObjectURL(image2) + "' alt='Image 2'><br>";
+            }
+            newPageContent += "<h2>Selected Options:</h2>";
+            newPageContent += "<p>Question 1: " + question1 + "</p>";
+            newPageContent += "<p>Question 2: " + question2 + "</p>";
+            // Add more questions here if needed
+
+            // Open a new page and display the content
+            var newWindow = window.open();
+            newWindow.document.write(newPageContent);
+        });
+    </script>
+</body>
+</html>
