@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location-based Pokémon Generator</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+        }
+        .pokemon-info {
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Location-based Pokémon Generator</h1>
+    <div class="input-group">
+        <label for="location-input">Enter Your Location:</label>
+        <input type="text" id="location-input" placeholder="Your Location">
+    </div>
+    <button id="generate-btn">Get Nearby Pokémon</button>
+    <div id="pokemon-container" class="result"></div>
+</div>
+
+<script>
+    // Function to handle button click event
+    function getNearbyPokemon() {
+        // Clear previous result
+        document.getElementById('pokemon-container').innerHTML = '';
+
+        // Get the user's location from the input field
+        const location = document.getElementById('location-input').value.trim();
+
+        // If location is empty, return error
+        if (!location) {
+            document.getElementById('pokemon-container').textContent = 'Please enter a valid location.';
+            return;
+        }
+
+        // Placeholder function to fetch nearby Pokémon based on location
+        // Replace this with actual logic to fetch Pokémon using location data
+        // Here, we're just displaying a placeholder message
+        const nearbyPokemon = [
+            { name: 'Pikachu', img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png', description: 'A Pokémon with electricity-storing pouches on its cheeks.' },
+            { name: 'Charmander', img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png', description: 'A flame burns on the tip of its tail from birth. It is said that a Charmander dies if its flame ever goes out.' },
+            { name: 'Bulbasaur', img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png', description: 'A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.' }
+        ];
+
+        // Display nearby Pokémon
+        nearbyPokemon.forEach(pokemon => {
+            const img = document.createElement('img');
+            img.src = pokemon.img;
+            img.alt = pokemon.name;
+
+            const paragraph = document.createElement('p');
+            paragraph.textContent = `You can find ${pokemon.name} near ${location}.`;
+            paragraph.classList.add('pokemon-info');
+
+            const description = document.createElement('p');
+            description.textContent = pokemon.description;
+            description.classList.add('pokemon-info');
+
+            document.getElementById('pokemon-container').appendChild(paragraph);
+            document.getElementById('pokemon-container').appendChild(img);
+            document.getElementById('pokemon-container').appendChild(description);
+        });
+    }
+
+    // Add click event listener to the button
+    document.getElementById('generate-btn').addEventListener('click', getNearbyPokemon);
+</script>
+
+</body>
+</html>

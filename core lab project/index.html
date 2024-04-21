@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Option Picker</title>
+</head>
+<body>
+  <h1>Random Option Picker</h1>
+  <button onclick="pickAndSpeakRandomOption()">Pick and Speak Random Option</button>
+  
+  <script>
+    var presetOptions = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
+
+    function pickAndSpeakRandomOption() {
+      var randomIndex = Math.floor(Math.random() * presetOptions.length);
+      var randomOption = presetOptions[randomIndex];
+      var utterance = new SpeechSynthesisUtterance(randomOption);
+      window.speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>

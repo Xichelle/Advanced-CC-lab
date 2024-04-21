@@ -1,0 +1,62 @@
+        /* Basic styling */
+        body {
+            font-family: "Pixelify Sans", sans-serif; 
+            font-size: 15pt;
+            background-image:url(3952024.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+           
+        }
+        .image{
+            text-align: center;
+            
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            opacity: 85%;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: url('cursor.gif'), auto;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .description {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .btn-save {
+            margin-top: 10px;
+            background-color: #28a745;
+        }
