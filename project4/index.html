@@ -22,8 +22,19 @@
         <input type="text" id="name-input" placeholder="Your Name">
     </div>
     <button id="generate-btn">Let's see which Pokémon you get</button>
+   
+</div>
+
+<div id="transition-scene" class=" fullscreen-scene hidden">
+    <img src="loading.gif" alt="Loading...">
+    <p>Loading...</p>
+</div>
+
+<div id="result-page" class="fullscreen-scene hidden">
+    <h1>let's see...</h1>
     <div id="pokemon-container" class="result"></div>
     <button id="save-btn" class="btn-save">Take your pokemon with you!</button>
+    <button id="retry-btn">Get another one?</button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>

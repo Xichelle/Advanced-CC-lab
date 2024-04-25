@@ -3,14 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 <title>Random Option Picker</title>
 </head>
 <body>
-  <h1>Random Option Picker</h1>
-  <button onclick="pickAndSpeakRandomOption()">Pick and Speak Random Option</button>
+  <h1>Seek enlightenment </h1>
+  <textarea id="textArea" name="textArea" rows="4" cols="50"></textarea><br>
+  <button onclick="pickAndSpeakRandomOption()">Pray</button>
   
   <script>
-    var presetOptions = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
+    var presetOptions = ["The real world is painful, and living in it is painful. Suffering comes from being alive. Accept and transform the forms of suffering in order to gain meaning.", 
+    "The first sound of life is a loud cry, that is the moment when suffering begins", 
+    "The suffering of this world is false, do not let external things shake the heart", 
+    "Anger, greed and desire, all emotions are the sand that blind the eyes of rational",
+     "Work to sharpen the mind will eventually get results",
+    "Problems do not always have results, accept suffering and doubt, and find inspiration in repetition"];
 
     function pickAndSpeakRandomOption() {
       var randomIndex = Math.floor(Math.random() * presetOptions.length);
