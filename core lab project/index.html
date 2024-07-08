@@ -3,28 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pray</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<title>Random Option Picker</title>
 </head>
 <body>
-  <h1>Seek enlightenment </h1>
-  <textarea id="textArea" name="textArea" rows="4" cols="50"></textarea><br>
-  <button onclick="pickAndSpeakRandomOption()">Pray</button>
-  
-  <script>
-    var presetOptions = ["The real world is painful, and living in it is painful. Suffering comes from being alive. Accept and transform the forms of suffering in order to gain meaning.", 
-    "The first sound of life is a loud cry, that is the moment when suffering begins", 
-    "The suffering of this world is false, do not let external things shake the heart", 
-    "Anger, greed and desire, all emotions are the sand that blind the eyes of rational",
-     "Work to sharpen the mind will eventually get results",
-    "Problems do not always have results, accept suffering and doubt, and find inspiration in repetition"];
+  <textarea id="input-text" placeholder="Find your enlightment here..."></textarea>
+  <div id="particle-container">
+    <div id="particle-answer"></div>
+  </div>
+  <button id="btn-generate">Pray</button>
+  <div class="fullscreen-transition" id="transition-scene">
+    <div id="transition-text">Covering the EYE with your hands...</div>
+  </div>
 
-    function pickAndSpeakRandomOption() {
-      var randomIndex = Math.floor(Math.random() * presetOptions.length);
-      var randomOption = presetOptions[randomIndex];
-      var utterance = new SpeechSynthesisUtterance(randomOption);
-      window.speechSynthesis.speak(utterance);
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

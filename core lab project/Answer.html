@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answer</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #answer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #answer-text {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  #btn-back {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+  <div id="answer-container">
+    <div id="answer-text"></div>
+    <button id="btn-back">Back to Question</button>
+  </div>
+
+  <script>
+    const answerText = document.getElementById('answer-text');
+    const btnBack = document.getElementById('btn-back');
+
+    // Get the randomly selected answer from localStorage
+    const selectedAnswer = localStorage.getItem('selectedAnswer');
+    answerText.innerText = selectedAnswer;
+
+    btnBack.addEventListener('click', () => {
+      window.location.href = 'index.html'; // Redirect back to the question page
+    });
+  </script>
+</body>
+</html>
